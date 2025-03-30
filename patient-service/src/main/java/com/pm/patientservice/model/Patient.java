@@ -31,55 +31,54 @@ public class Patient {
     private LocalDate dateOfBirth;
 
     @NotNull
-    private LocalDate timeOfBirth;
+    private LocalDate registeredDate;
 
     public UUID getId() {
         return id;
     }
-//getters and setters
+
     public void setId(UUID id) {
         this.id = id;
     }
 
-    public String getName() {
+    public @NotNull String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(@NotNull String name) {
         this.name = name;
     }
 
-    public String getEmail() {
+    public @NotNull @Email String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(@NotNull @Email String email) {
         this.email = email;
     }
 
-    public String getAddress() {
+    public @NotNull String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(@NotNull String address) {
         this.address = address;
     }
 
-    public LocalDate getTimeOfBirth() {
-        return timeOfBirth;
-    }
-
-    public void setTimeOfBirth(LocalDate timeOfBirth) {
-        this.timeOfBirth = timeOfBirth;
-    }
-
-    public LocalDate getDateOfBirth() {
+    public @NotNull LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(@NotNull LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public @NotNull LocalDate getRegisteredDate() {
+        return registeredDate;
+    }
+
+    public void setRegisteredDate(@NotNull LocalDate registeredDate) {
+        this.registeredDate = registeredDate;
+    }
 
 }
